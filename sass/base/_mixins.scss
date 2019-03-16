@@ -1,0 +1,17 @@
+@import "base/variables";
+
+@mixin mq-sp($max: $sp-max-width) {
+  @media only screen and (max-width: #{$max}) {
+    @content;
+  }
+}
+@mixin mq-tb($max: $tb-max-width) {
+  @media only screen and (max-width: #{$max}) {
+    @content;
+  }
+}
+@mixin mq-pc($max: $pc-max-width) {
+  @media only screen and (max-width: #{$max}) {
+    @content;
+  }
+}

@@ -1,0 +1,1663 @@
+@import "base/mixins.scss";
+
+@import "base/reset.scss";
+
+@import "base/variables.scss";
+
+//------------ Partials styles ------------------------------------------------//
+
+.logo {
+  float: left;
+  margin-top: 50px;
+  margin-left: -210px;
+  &:hover {
+    transform: scale(1.1, 1.1);
+  }
+  @include mq-sp {
+    margin-top: 25px;
+  }
+  img {
+    @include mq-sp {
+      width: 150px;
+      margin-left: 50%;
+    }
+  }
+}
+
+.nav {
+  position: absolute;
+  right: 0px;
+  display: block;
+  img {
+    float: right;
+    right: 0px;
+    margin-right: 100px;
+    margin-top: 100px;
+    animation: bounce 0.8s;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(0.5, 0.05, 2, 0.5);
+    animation-iteration-count: infinite;
+    @-webkit-keyframes bounce {
+      from {
+        transform: translate3d(0, 0, 0);
+      }
+      to {
+        transform: translate3d(0, 50px, 0);
+      }
+    }
+    @include mq-sp {
+      display: none;
+    }
+  }
+
+  #navi {
+    float: right;
+    position: absolute;
+    right: 0px;
+    margin-right: 0px;
+    margin-top: 600px;
+    width: 275px;
+    z-index: 9999;
+    @include mq-sp {
+      font-size: 14px;
+      margin-top: 200px;
+      text-align: right;
+    }
+    .nav-cell_w {
+      text-align: right;
+      display: inline-block;
+      width: 275px;
+      @include mq-sp {
+        display: block;
+      }
+      li {
+        margin-top: 10px;
+        display: inline-block;
+        @include mq-sp {
+          display: inline-block;
+          margin-top: 10px;
+        }
+        a {
+          text-decoration: none;
+          font-family: $font;
+          color: $white;
+          font-size: $h2_5-size;
+          transition: all 0.4s ease;
+          &:hover {
+            color: $orange;
+          }
+          @include mq-sp {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .line_w {
+      display: inline-block;
+      width: 100px;
+      height: 3px;
+      background-color: $white;
+      margin-bottom: 13px;
+      @include mq-sp {
+        width: 30px;
+        margin-bottom: 6px;
+      }
+    }
+    .nav-cell_b {
+      text-align: right;
+      display: inline-block;
+      width: 275px;
+      @include mq-sp {
+        display: block;
+      }
+      li {
+        margin-top: 10px;
+        display: inline-block;
+        @include mq-sp {
+          display: inline-block;
+          margin-top: 10px;
+        }
+
+        a {
+          text-decoration: none;
+          font-family: $font;
+          color: $black;
+          font-size: $h2_5-size;
+          transition: all 0.4s ease;
+          &:hover {
+            color: $orange;
+          }
+          @include mq-sp {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .line_b {
+      display: inline-block;
+      width: 100px;
+      height: 3px;
+      background-color: $black;
+      margin-bottom: 13px;
+      @include mq-sp {
+        width: 30px;
+        margin-bottom: 6px;
+      }
+    }
+  }
+}
+
+.footer {
+  position: absolute;
+  width: 100%;
+  margin-top: 120px;
+  @include mq-sp {
+    width: 100%;
+    top: 1125px;
+    margin-bottom: 20px;
+  }
+  .sm_icons_w {
+    display: inline-block;
+    width: 100%;
+    font-family: $font;
+    i {
+      color: #fff;
+      font-size: 35px;
+      padding: 5px;
+      display: inline-block;
+      transition: all 0.3s ease;
+      &:hover {
+        color: $orange;
+      }
+      @include mq-sp {
+        font-size: 14px;
+      }
+      &:first-child {
+        margin-left: 30px;
+        font-size: 30px;
+        @include mq-sp {
+          font-size: 14px;
+          margin-left: 10px;
+        }
+      }
+    }
+    p {
+      font-family: $font;
+      font-size: 27px;
+      display: inline-block;
+      margin-right: 30px;
+      color: white;
+      &:hover {
+        color: $orange;
+      }
+      @include mq-sp {
+        font-size: 14px;
+        margin-right: 10px;
+      }
+    }
+    .footLine_w {
+      height: 3px;
+      width: 80%;
+      display: inline-block;
+      background-color: $white;
+      margin-bottom: 10px;
+      @include mq-sp {
+        width: 55%;
+        margin-bottom: 6px;
+      }
+    }
+  }
+}
+
+.footer_b {
+  position: absolute;
+  width: 100%;
+  margin-bottom: 50px;
+  margin-top: 30px;
+  @include mq-sp {
+    width: 100%;
+    top: 1125px;
+    margin-bottom: 20px;
+  }
+  .sm_icons_b {
+    display: inline-block;
+    width: 100%;
+    font-family: $font;
+    i {
+      color: $black;
+      font-size: 35px;
+      padding: 5px;
+      display: inline-block;
+      transition: all 0.3s ease;
+      &:hover {
+        color: $orange;
+      }
+      @include mq-sp {
+        font-size: 14px;
+      }
+      &:first-child {
+        margin-left: 30px;
+        font-size: 30px;
+        @include mq-sp {
+          font-size: 14px;
+          margin-left: 10px;
+        }
+      }
+    }
+    p {
+      font-family: $font;
+      font-size: 27px;
+      display: inline-block;
+      margin-right: 30px;
+      color: $black;
+      &:hover {
+        color: $orange;
+      }
+      @include mq-sp {
+        font-size: 14px;
+        margin-right: 10px;
+      }
+    }
+    .footLine_b {
+      height: 3px;
+      width: 80%;
+      display: inline-block;
+      background-color: $black;
+      margin-bottom: 10px;
+      @include mq-sp {
+        width: 55%;
+        margin-bottom: 6px;
+      }
+    }
+  }
+}
+
+.scaled {
+  transform: scale(1.5, 1.5);
+}
+
+.move {
+  transform: translate(235px, 0px);
+}
+
+//------------ Partials styles ------------------------------------------------//
+//------------ Home Page ------------------------------------------------------//
+
+#home_bg {
+  background: url("../imgs/bg_home.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 210vh;
+  @include mq-sp {
+    background: url("../imgs/bg_home_sp.png");
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+.disk {
+  float: left;
+  img {
+    margin-left: -50.5%;
+    margin-top: 2.5%;
+    -webkit-animation: rotation 4s infinite linear;
+    @-webkit-keyframes rotation {
+      from {
+        -webkit-transform: rotate(0deg);
+      }
+      to {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+    @include mq-sp {
+      height: 250px;
+      margin-top: 100px;
+    }
+  }
+}
+
+.toursHead {
+  position: absolute;
+  top: 115%;
+  @include mq-sp {
+    top: 66%;
+  }
+  .line_o {
+    display: inline-block;
+    width: 450px;
+    height: 3px;
+    background-color: $orange;
+    margin-bottom: 21px;
+    @include mq-sp {
+      width: 55px;
+      margin-bottom: 7px;
+    }
+  }
+  h1 {
+    display: inline-block;
+    font-family: $font;
+    font-size: $h1-size;
+    color: $white;
+    margin-left: 15px;
+    @include mq-sp {
+      font-size: $h3-size;
+      margin-left: 10px;
+    }
+  }
+}
+
+.nav_home {
+  position: fixed;
+  @include mq-sp {
+    position: absolute;
+  }
+}
+
+//--tours & updates --//
+
+.map {
+  display: inline-block;
+  position: relative;
+  transition: all 0.4s ease;
+  @include mq-sp {
+    width: 100%;
+  }
+  #tMap {
+    position: relative;
+    left: 370px;
+    margin-top: 400px;
+    @include mq-sp {
+      width: 100%;
+      left: -5px;
+      margin-top: 90px;
+    }
+  }
+  #tourStamp {
+    position: absolute;
+    left: 740px;
+    bottom: 5px;
+    @include mq-sp {
+      width: 30%;
+      left: 150px;
+    }
+  }
+  .mark1 {
+    position: absolute;
+    top: 52.5%;
+    left: 50.5%;
+    &:hover {
+      transform: scale(1.5, 1.5);
+    }
+    @include mq-sp {
+      display: none;
+    }
+  }
+  .mark2 {
+    position: absolute;
+    top: 58.5%;
+    left: 62.5%;
+    &:hover {
+      transform: scale(1.5, 1.5);
+    }
+    @include mq-sp {
+      display: none;
+    }
+  }
+  .mark3 {
+    position: absolute;
+    top: 79.5%;
+    left: 65.5%;
+    &:hover {
+      transform: scale(1.5, 1.5);
+    }
+    @include mq-sp {
+      display: none;
+    }
+  }
+  .mark4 {
+    position: absolute;
+    top: 66.5%;
+    left: 98.5%;
+    &:hover {
+      transform: scale(1.5, 1.5);
+    }
+    @include mq-sp {
+      display: none;
+    }
+  }
+  .mark5 {
+    position: absolute;
+    top: 70.5%;
+    left: 106.5%;
+    &:hover {
+      transform: scale(1.5, 1.5);
+    }
+    @include mq-sp {
+      display: none;
+    }
+  }
+  .mark6 {
+    position: absolute;
+    top: 57%;
+    left: 114%;
+    &:hover {
+      transform: scale(1.5, 1.5);
+    }
+    @include mq-sp {
+      display: none;
+    }
+  }
+  .mark7 {
+    position: absolute;
+    top: 60.5%;
+    left: 123.5%;
+    &:hover {
+      transform: scale(1.5, 1.5);
+    }
+    @include mq-sp {
+      display: none;
+    }
+  }
+  .mark8 {
+    position: absolute;
+    top: 92.5%;
+    left: 127.5%;
+    &:hover {
+      transform: scale(1.5, 1.5);
+    }
+    @include mq-sp {
+      display: none;
+    }
+  }
+}
+
+.tourInfo {
+  position: absolute;
+  display: inline-block;
+  width: 21%;
+  top: 128%;
+  left: 35px;
+  @include mq-sp {
+    display: inline-block;
+    width: 93%;
+    top: 670px;
+    left: 25px;
+  }
+  .info-cell {
+    font-family: $font;
+    padding: 10px;
+    color: $white;
+    border-bottom: 1px solid $white;
+    transition: all 0.4s ease;
+    @include mq-sp {
+      font-size: 12px;
+      width: 80%;
+    }
+    h3 {
+      padding-bottom: 6px;
+    }
+    p {
+      font-family: $font-2;
+    }
+    &:hover {
+      color: $orange;
+    }
+  }
+  .btn_home {
+    margin: 15px;
+    a {
+      font-family: $font;
+      font-size: $h3-size;
+      text-decoration: none;
+      color: $white;
+      padding-right: 50px;
+      padding-left: 10px;
+      text-align: left;
+      border-radius: 3px;
+      transition: all 0.3s ease;
+      &:hover {
+        color: #000;
+        background-color: #ff9933;
+      }
+      @include mq-sp {
+        font-size: 16px;
+        background-color: $orange;
+      }
+    }
+    i {
+      transition: all 0.7s ease;
+      animation: bounce-left 0.8s;
+      animation-direction: alternate;
+      animation-timing-function: cubic-bezier(0.5, 0.5, 2, 0.75);
+      animation-iteration-count: infinite;
+      @-webkit-keyframes bounce-left {
+        from {
+          transform: translate3d(0, 0, 0);
+        }
+        to {
+          transform: translate3d(40px, 0, 0);
+        }
+      }
+    }
+  }
+}
+
+//--tours & updates --//
+
+.home_foot {
+  margin-top: 120px;
+}
+//------------ Home Page ------------------------------------------------------//
+//------------ About Page ------------------------------------------------------//
+
+#abtBg {
+  background: url("../imgs/bg_abt.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  @include mq-sp {
+    background: url("../imgs/bg_abt_sp.png");
+  }
+  #navi {
+    @include mq-sp {
+      margin-top: 150px;
+    }
+  }
+}
+
+.logo_o {
+  position: absolute;
+  background: url("../imgs/logo_o.png");
+  width: 20%;
+  height: 194px;
+  background-repeat: no-repeat;
+  margin-top: 40px;
+  margin-left: 30px;
+  &:hover {
+    transform: scale(1.1, 1.1);
+  }
+  @include mq-sp {
+    width: 150px;
+    margin-left: 32%;
+    height: 100px;
+    margin-top: 20px;
+    background-size: contain;
+  }
+}
+
+.abtme {
+  color: $white;
+  .abtHead {
+    position: absolute;
+    font-family: $font;
+    font-size: $h1-size;
+    margin-top: 300px;
+    margin-bottom: 50px;
+    @include mq-sp {
+      font-size: $h3-size;
+      width: 100%;
+    }
+    h1 {
+      display: inline-block;
+      margin-left: 30px;
+      @include mq-sp {
+        margin-left: 10px;
+      }
+    }
+    .line_o_abt {
+      width: 500px;
+      background-color: $orange;
+      height: 3px;
+      display: inline-block;
+      margin-bottom: 27px;
+      @include mq-sp {
+        width: 201px;
+        margin-bottom: 7px;
+      }
+    }
+  }
+  .abtCont {
+    width: 70%;
+    position: absolute;
+    margin-top: 460px;
+    margin-left: 30px;
+    font-family: $font-2;
+    @include mq-sp {
+      width: 97%;
+      margin-top: 395px;
+      margin-left: 5px;
+    }
+    .abt_info {
+      float: left;
+      width: 33%;
+      font-size: 20px;
+      @include mq-sp {
+        width: 100%;
+        font-size: 12px;
+      }
+      p {
+        padding-bottom: 10px;
+        padding-right: 20px;
+        display: block;
+        @include mq-sp {
+          padding-right: 0px;
+        }
+      }
+    }
+    .imgBlock {
+      width: 67%;
+      float: left;
+      @include mq-sp {
+        width: 100%;
+        margin-top: 20px;
+      }
+      img {
+        width: 200px;
+        &:hover {
+          transform: scale(1.2, 1.2);
+        }
+        @include mq-sp {
+          width: 150px;
+        }
+      }
+    }
+  }
+}
+
+.abt_foot {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  margin-top: 20px;
+  @include mq-sp {
+    top: 150%;
+    margin-bottom: 40px;
+    bottom: 20px;
+  }
+}
+//------------ About Page ------------------------------------------------------//
+//------------ Experiences Page ------------------------------------------------------//
+
+#expPg {
+  background: url("../imgs/bg_exp.png");
+  @include mq-sp {
+    background: url("../imgs/bg_exp_sp.png");
+  }
+}
+
+.expHead {
+  width: 100%;
+  padding: 0px;
+  video {
+    width: 100%;
+    margin-top: -40px;
+    padding: 0px;
+    @include mq-sp {
+      display: none;
+    }
+  }
+
+  .logo_exp {
+    position: absolute;
+    top: 0px;
+    background: url("../imgs/logo_o.png");
+    width: 20%;
+    height: 194px;
+    background-repeat: no-repeat;
+    margin-top: 40px;
+    margin-left: 30px;
+    &:hover {
+      transform: scale(1.1, 1.1);
+    }
+    @include mq-sp {
+      width: 150px;
+      margin-left: 32%;
+      height: 100px;
+      margin-top: 20px;
+      background-size: contain;
+    }
+  }
+  .expHeadline {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    text-align: right;
+    padding-right: 0px;
+    margin-top: 100px;
+    @include mq-sp {
+      margin-top: 102px;
+    }
+    h1 {
+      font-family: $font;
+      font-size: $h1-size;
+      color: $white;
+      display: inline-block;
+      @include mq-sp {
+        font-size: 28px;
+      }
+    }
+    .line_o_exp {
+      width: 400px;
+      height: 3px;
+      background-color: $orange;
+      display: inline-block;
+      margin-bottom: 22px;
+      @include mq-sp {
+        width: 110px;
+        margin-bottom: 11px;
+      }
+    }
+  }
+}
+
+.pointer {
+  position: absolute;
+  top: 350px;
+  left: 0px;
+  display: block;
+
+  img {
+    float: left;
+    right: 0px;
+    margin-left: 100px;
+    margin-top: 100px;
+    animation: bounce 0.8s;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(0.5, 0.05, 2, 0.5);
+    animation-iteration-count: infinite;
+    @-webkit-keyframes bounce {
+      from {
+        transform: translate3d(0, 0, 0);
+      }
+      to {
+        transform: translate3d(0, 50px, 0);
+      }
+    }
+    @include mq-sp {
+      display: none;
+    }
+  }
+}
+
+.nav_exp {
+  margin-top: -400px;
+  position: fixed;
+  z-index: 9999;
+  @include mq-sp {
+    position: absolute;
+    margin-top: -300px;
+  }
+}
+
+.bigX {
+  position: absolute;
+  right: 350px;
+  margin-top: -100px;
+  @include mq-sp {
+    margin-top: 100px;
+    right: 277px;
+  }
+}
+
+.gallery {
+  padding: 0px;
+  .galHead {
+    padding: 0px;
+    margin-top: 80px;
+    @include mq-sp {
+      margin-top: 440px;
+    }
+    .line_w_exp {
+      width: 350px;
+      background-color: $orange;
+      height: 3px;
+      display: inline-block;
+      margin-bottom: 24px;
+      @include mq-sp {
+        width: 120px;
+        margin-bottom: 11px;
+      }
+    }
+    h1 {
+      display: inline-block;
+      font-family: $font;
+      color: $white;
+      font-size: $h1-size;
+      @include mq-sp {
+        font-size: 28px;
+      }
+    }
+  }
+  #slider {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    float: left;
+    width: 100%;
+    height: 600px;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    background-position: center;
+    [type="radio"] {
+      display: none;
+    }
+    label {
+      margin: auto;
+      width: 50%;
+      height: 90%;
+      border-radius: 4px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      cursor: pointer;
+      transition: transform 0.4s ease;
+      @include mq-sp {
+        width: 70%;
+      }
+    }
+    #s1:checked ~ #slide4,
+    #s2:checked ~ #slide5,
+    #s3:checked ~ #slide1,
+    #s4:checked ~ #slide2,
+    #s5:checked ~ #slide3 {
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+      transform: translate3d(-30%, 0, -200px);
+    }
+
+    #s1:checked ~ #slide5,
+    #s2:checked ~ #slide1,
+    #s3:checked ~ #slide2,
+    #s4:checked ~ #slide3,
+    #s5:checked ~ #slide4 {
+      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3),
+        0 2px 2px 0 rgba(0, 0, 0, 0.2);
+      transform: translate3d(-15%, 0, -100px);
+    }
+
+    #s1:checked ~ #slide1,
+    #s2:checked ~ #slide2,
+    #s3:checked ~ #slide3,
+    #s4:checked ~ #slide4,
+    #s5:checked ~ #slide5 {
+      box-shadow: 0 13px 25px 0 rgba(0, 0, 0, 0.3),
+        0 11px 7px 0 rgba(0, 0, 0, 0.19);
+      transform: translate3d(0, 0, 0);
+    }
+
+    #s1:checked ~ #slide2,
+    #s2:checked ~ #slide3,
+    #s3:checked ~ #slide4,
+    #s4:checked ~ #slide5,
+    #s5:checked ~ #slide1 {
+      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3),
+        0 2px 2px 0 rgba(0, 0, 0, 0.2);
+      transform: translate3d(15%, 0, -100px);
+    }
+
+    #s1:checked ~ #slide3,
+    #s2:checked ~ #slide4,
+    #s3:checked ~ #slide5,
+    #s4:checked ~ #slide1,
+    #s5:checked ~ #slide2 {
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+      transform: translate3d(30%, 0, -200px);
+    }
+
+    #slide1 {
+      background: url(../imgs/f1.png);
+      background-size: cover;
+      background-position: center;
+    }
+    #slide2 {
+      background: url(../imgs/f2.png);
+      background-size: cover;
+      background-position: center;
+    }
+    #slide3 {
+      background: url(../imgs/f3.png);
+      background-size: cover;
+      background-position: center;
+    }
+    #slide4 {
+      background: url(../imgs/f4.png);
+      background-size: cover;
+      background-position: center;
+    }
+    #slide5 {
+      background: url(../imgs/f5.png);
+      background-size: cover;
+      background-position: center;
+    }
+    @include mq-sp {
+      height: 300px;
+      margin-top: 80px;
+    }
+  }
+}
+
+.exp_foot {
+  margin-top: 0px;
+  padding-bottom: 50px;
+  @include mq-sp {
+    top: 882px;
+    padding-bottom: 0px;
+  }
+}
+//------------ Experiences Page ------------------------------------------------------//
+//------------ booking Page ------------------------------------------------------//
+
+#bookPg {
+  height: 220vh;
+  @include mq-sp {
+    height: 120vh;
+  }
+  .logo {
+    float: left;
+    width: 65%;
+    margin-top: 5%;
+    margin-left: 7%;
+    @include mq-sp {
+      margin-left: 0px;
+    }
+  }
+  #halfx {
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    @include mq-sp {
+      transform: rotate(180deg);
+      position: absolute;
+      top: 50px;
+      right: 50%;
+      z-index: -9998;
+    }
+  }
+  #navi {
+    margin-top: 600px;
+    position: fixed;
+    @include mq-sp {
+      position: absolute;
+      margin-top: 120px;
+    }
+  }
+  #zig1 {
+    margin-left: 70px;
+    margin-top: 70px;
+    z-index: -9999;
+    @include mq-sp {
+      width: 150px;
+      margin-left: 100px;
+    }
+  }
+  .box1 {
+    float: left;
+    position: absolute;
+    left: 10%;
+    top: 60%;
+    width: 90%;
+    @include mq-sp {
+      width: 100%;
+      top: 45%;
+      left: 0px;
+    }
+    #bookbox1 {
+      width: 70%;
+      @include mq-sp {
+        width: 100%;
+        margin-top: 20px;
+      }
+    }
+    h1 {
+      font-family: $font;
+      color: $orange;
+      font-size: $h2-size;
+      position: absolute;
+      top: 25%;
+      left: 42%;
+      @include mq-sp {
+        font-size: 20px;
+        left: 57%;
+        top: 15%;
+      }
+    }
+    p {
+      font-family: $font-2;
+      color: $white;
+      font-size: $h3-size;
+      position: absolute;
+      width: 22%;
+      top: 34%;
+      left: 42%;
+      @include mq-sp {
+        font-size: 12px;
+        left: 57%;
+        top: 30%;
+        width: 40%;
+      }
+    }
+    a {
+      background-color: $white;
+      color: $black;
+      text-decoration: none;
+      font-family: $font;
+      font-size: $h2_5-size;
+      border-radius: 2px;
+      position: absolute;
+      width: 10%;
+      padding: 10px;
+      top: 52%;
+      left: 42%;
+      transition: all 0.4s ease;
+      &:hover {
+        background-color: $orange;
+        width: 15%;
+      }
+      @include mq-sp {
+        font-size: 20px;
+        left: 57%;
+        top: 52%;
+        width: 25%;
+        background-color: $orange;
+      }
+    }
+  }
+  .box2 {
+    float: left;
+    position: absolute;
+    left: 16.1%;
+    top: 115%;
+    width: 70%;
+    @include mq-sp {
+      width: 100%;
+      top: 85%;
+      left: 0px;
+    }
+    #bookbox2 {
+      width: 99%;
+      @include mq-sp {
+        width: 100%;
+      }
+    }
+    h1 {
+      font-family: $font;
+      color: $orange;
+      font-size: $h2-size;
+      position: absolute;
+      top: 37%;
+      left: 2%;
+      @include mq-sp {
+        font-size: 20px;
+        width: 35%;
+        top: 28%;
+      }
+    }
+    .txt_block1 {
+      h2 {
+        font-family: $font;
+        color: $white;
+        font-size: $h2_5-size;
+        position: absolute;
+        top: 45%;
+        left: 2%;
+        @include mq-sp {
+          font-size: 14px;
+          top: 50%;
+          left: 3%;
+        }
+      }
+      #p1 {
+        font-family: $font-2;
+        color: $white;
+        font-size: $h3-size;
+        position: absolute;
+        top: 52%;
+        left: 2%;
+        @include mq-sp {
+          font-size: 12px;
+          top: 59%;
+          left: 3%;
+        }
+      }
+      #p2 {
+        font-family: $font-2;
+        color: $white;
+        font-size: $h3-size;
+        position: absolute;
+        top: 57%;
+        left: 2%;
+        @include mq-sp {
+          font-size: 12px;
+          top: 65%;
+          left: 3%;
+        }
+      }
+    }
+    .txt_block2 {
+      h2 {
+        font-family: $font;
+        color: $white;
+        font-size: $h2_5-size;
+        position: absolute;
+        top: 65%;
+        left: 2%;
+        @include mq-sp {
+          font-size: 14px;
+          top: 73%;
+          left: 3%;
+        }
+      }
+      p {
+        font-family: $font-2;
+        color: $white;
+        font-size: $h3-size;
+        position: absolute;
+        top: 77%;
+        left: 2%;
+        @include mq-sp {
+          font-size: 12px;
+          top: 89%;
+          left: 3%;
+        }
+      }
+    }
+  }
+  #zig_circle {
+    position: absolute;
+    top: 169%;
+    left: 62%;
+    -webkit-animation: rotation 4s infinite linear;
+    @-webkit-keyframes rotation {
+      from {
+        -webkit-transform: rotate(0deg);
+      }
+      to {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+    @include mq-sp {
+      top: 92%;
+      width: 150px;
+      left: 52%;
+    }
+  }
+  .bkng {
+    @include mq-sp {
+      top: 748px;
+    }
+  }
+}
+//------------ booking Page ------------------------------------------------------//
+//------------ checkout Page ------------------------------------------------------//
+
+#chkoutPg {
+  background: url("../imgs/bg_book.png");
+
+  @include mq-sp {
+    background: url("../imgs/bg_chk_sp.png");
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
+  .logo {
+    margin-left: 50px;
+    width: 65%;
+    @include mq-sp {
+      margin-left: 0px;
+    }
+  }
+  #navi {
+    margin-top: 80px;
+    @include mq-sp {
+      margin-top: 100px;
+    }
+  }
+  .frm {
+    .offer {
+      font-family: $font;
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      color: $white;
+      &:hover {
+        color: $orange;
+      }
+      #p02 {
+        font-size: $h1-size;
+        font-weight: 600;
+        color: rgb(7, 116, 179);
+        padding-top: 5px;
+        padding-bottom: 7px;
+      }
+      #p01 {
+        font-size: 30px;
+      }
+      #p03 {
+        font-size: 29px;
+      }
+      @include mq-sp {
+        display: none;
+      }
+    }
+    #frmblk {
+      margin-left: 30%;
+      width: 750px;
+      @include mq-sp {
+        width: 90%;
+        height: 300px;
+        margin-left: 19px;
+        margin-top: 160px;
+      }
+    }
+    form {
+      display: block;
+      font-family: $font;
+      position: absolute;
+      top: 45%;
+      left: 37%;
+      @include mq-sp {
+        width: 95%;
+        left: 5%;
+        top: 48%;
+        margin-top: 15px;
+      }
+      input,
+      select,
+      option {
+        font-family: $font;
+        display: block;
+        padding: 10px;
+        width: 450px;
+        margin: 15px;
+        color: $white;
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid $white;
+        @include mq-sp {
+          width: 300px;
+          margin: 10px;
+          padding: 5px;
+        }
+      }
+      option {
+        background-color: $black;
+        padding-right: 20px;
+        @include mq-sp {
+          width: 300px;
+          margin: 10px;
+          padding: 5px;
+          padding-right: 0px;
+        }
+      }
+      a {
+        text-decoration: none;
+        #save {
+          background-color: $orange;
+          margin-top: 30px;
+          border-bottom: none;
+          color: $white;
+          font-size: $h3-size;
+          border-radius: 3px;
+          width: 300px;
+          transition: all 0.4s ease;
+          &:hover {
+            width: 470px;
+            color: $black;
+          }
+          @include mq-sp {
+            margin-top: 20px;
+            transition: all 0.4s ease;
+            &:hover {
+              color: $black;
+              width: 300px;
+            }
+          }
+        }
+      }
+      #ticCat,
+      #locals {
+        width: 470px;
+        @include mq-sp {
+          width: 310px;
+        }
+      }
+    }
+  }
+  #disk3 {
+    width: 200px;
+    position: absolute;
+    left: 22%;
+    bottom: 5%;
+    -webkit-animation: rotation 4s infinite linear;
+    @-webkit-keyframes rotation {
+      from {
+        -webkit-transform: rotate(0deg);
+      }
+      to {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+    @include mq-sp {
+      width: 175px;
+      left: 26%;
+      top: 80%;
+      z-index: -9999;
+    }
+  }
+  #success {
+    font-family: $font-2;
+    font-size: 25px;
+    padding: 35px;
+    i {
+      display: inline-block;
+      color: rgb(7, 190, 7);
+      margin-right: 10px;
+    }
+    p {
+      display: inline-block;
+    }
+    @include mq-sp {
+      padding: 15px;
+      font-size: 15px;
+    }
+  }
+}
+
+//------------ checkout Page ------------------------------------------------------//
+//------------ Music Page ------------------------------------------------------//
+
+#musicPg {
+  background: url("../imgs/equi.gif");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include mq-sp {
+    background-size: contain;
+    background-position-y: 180px;
+  }
+  .nav {
+    position: absolute;
+    @include mq-sp {
+      margin-top: 45px;
+    }
+  }
+  .logo {
+    margin-left: 50px;
+    display: inline-block;
+    width: 300px;
+    @include mq-sp {
+      margin-left: 33px;
+      width: 150px;
+    }
+  }
+  .mHead {
+    display: inline-block;
+    font-family: $font;
+    font-size: $h1-size;
+    margin-top: 100px;
+    float: right;
+    @include mq-sp {
+      float: left;
+    }
+    h1 {
+      display: inline-block;
+      @include mq-sp {
+        font-size: 28px;
+      }
+    }
+    .line_o {
+      display: inline-block;
+      width: 400px;
+      height: 3px;
+      background-color: $orange;
+      margin-bottom: 25px;
+      @include mq-sp {
+        width: 108px;
+        margin-bottom: 11px;
+      }
+    }
+  }
+  .player {
+    background-color: $white;
+    width: 300px;
+    border-radius: 5px;
+    position: absolute;
+    top: 400px;
+    padding: 10px;
+    font-family: $font;
+    @include mq-sp {
+      left: 28px;
+      box-shadow: 5px -5px 5px rgba(204, 204, 204, 0.5),
+        -5px -5px 5px rgba(204, 204, 204, 0.5);
+    }
+
+    .song {
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-radius: 3px;
+      transition: all 0.3s ease;
+      &:hover {
+        background-color: lightgray;
+      }
+      .title {
+        display: inline-block;
+        margin-left: 10px;
+        h1 {
+          font-size: $h4-size;
+          margin-bottom: 10px;
+        }
+      }
+      .album1 {
+        height: 50px;
+        width: 50px;
+        margin-left: 10px;
+        margin-top: 10px;
+        border-radius: 3px;
+        background: url("../imgs/alb1.png");
+        background-size: contain;
+        display: inline-block;
+      }
+      .album2 {
+        height: 50px;
+        width: 50px;
+        margin-left: 10px;
+        margin-top: 10px;
+        border-radius: 3px;
+        background: url("../imgs/alb2.png");
+        background-size: contain;
+        display: inline-block;
+      }
+      .album3 {
+        height: 50px;
+        width: 50px;
+        margin-left: 10px;
+        margin-top: 10px;
+        border-radius: 3px;
+        background: url("../imgs/alb3.png");
+        background-size: contain;
+        display: inline-block;
+      }
+      .album4 {
+        height: 50px;
+        width: 50px;
+        margin-left: 10px;
+        margin-top: 10px;
+        border-radius: 3px;
+        background: url("../imgs/alb4.png");
+        background-size: contain;
+        display: inline-block;
+      }
+    }
+    .controlP {
+      position: relative;
+      width: 300px;
+      height: 75px;
+      padding: 15px 0px;
+      background: $black;
+      border-radius: 5px;
+      text-align: center;
+      margin: auto auto;
+      .trackLine {
+        background: $white;
+        border-radius: 1.5px;
+        height: 3px;
+        width: 250px;
+        z-index: 9999;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      .progressBall {
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+        background-color: $orange;
+        position: absolute;
+        top: 29.8%;
+        left: 9%;
+        transition-duration: 120s;
+      }
+      .controls {
+        i {
+          padding-left: 5px;
+          padding-right: 5px;
+          transition: all 0.4s ease;
+          &:hover {
+            transform: scale(1.1, 1.1);
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+  .albumArt {
+    width: 278px;
+    height: 278px;
+    border-radius: 50%;
+    position: absolute;
+    left: 41.77%;
+    top: 42.7%;
+    background-image: url("../imgs/alb2.png");
+    background-size: cover;
+    -webkit-animation: rotation 4s infinite linear;
+    @-webkit-keyframes rotation {
+      from {
+        -webkit-transform: rotate(0deg);
+      }
+      to {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+    @include mq-sp {
+      width: 62px;
+      height: 62px;
+      left: 41.77%;
+      top: 48.9%;
+    }
+  }
+  .trackTitle {
+    position: absolute;
+    left: 59%;
+    top: 40%;
+    font-family: $font;
+    color: lightgray;
+    @include mq-sp {
+      left: 5%;
+      top: 33%;
+    }
+    .trackName {
+      font-size: $h1-size;
+      @include mq-sp {
+        font-size: 25px;
+      }
+    }
+    .artist {
+      font-size: $h2-size;
+      @include mq-sp {
+        font-size: 15px;
+      }
+    }
+  }
+  .albumz {
+    position: absolute;
+    top: 105%;
+    width: 100%;
+    @include mq-sp {
+      top: 160%;
+      width: 99%;
+    }
+    .albHead {
+      font-family: $font;
+      margin-bottom: 50px;
+      h1 {
+        font-size: $h1-size;
+        display: inline-block;
+        @include mq-sp {
+          font-size: 28px;
+        }
+      }
+      .line_o {
+        width: 500px;
+        height: 3px;
+        background-color: $orange;
+        display: inline-block;
+        margin-bottom: 25px;
+        @include mq-sp {
+          width: 135px;
+          margin-bottom: 11px;
+        }
+      }
+    }
+    .covers {
+      width: 100%;
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-evenly;
+      @include mq-sp {
+        display: inline-block;
+        width: 50%;
+        float: left;
+        margin-top: 0px;
+      }
+      .albu {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+        @include mq-sp {
+          padding: 0px;
+        }
+        h1 {
+          font-family: $font;
+          font-size: $h4-size;
+          margin-top: 15px;
+          @include mq-sp {
+            font-size: 15px;
+            margin-bottom: 10px;
+            margin-top: 5px;
+          }
+        }
+        img {
+          opacity: 0.5;
+          transition: all 0.4s ease;
+          border-radius: 50%;
+          &:hover {
+            opacity: 1;
+            border-radius: 2%;
+          }
+          @include mq-sp {
+            opacity: 1;
+            width: 100px;
+          }
+        }
+      }
+    }
+  }
+  .footer_b {
+    position: absolute;
+    top: 195%;
+    @include mq-sp {
+      top: 265%;
+    }
+  }
+}
+
+//------------ Music Page ------------------------------------------------------//
